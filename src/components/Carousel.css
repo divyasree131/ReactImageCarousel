@@ -1,0 +1,85 @@
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  max-width: 600px; /* Adjust the max-width as needed */
+  height: auto;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slide {
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 7px #666;
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Ensures the image covers the area without stretching */
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slide-hidden {
+  display: none;
+}
+
+.arrow {
+  position: absolute;
+  color: white;
+  width: 2rem;
+  height: 2rem;
+  filter: drop-shadow(0px 0px 5px #555);
+  cursor: pointer;
+  z-index: 10;
+}
+
+.arrow-left {
+  left: 1rem;
+}
+
+.arrow-right {
+  right: 1rem;
+}
+
+.indicators {
+  position: absolute;
+  display: flex;
+  bottom: 1rem;
+}
+
+.indicator {
+  background-color: white;
+  border: none;
+  outline: none;
+  height: 0.5rem;
+  width: 0.5rem;
+  box-shadow: 0px 0px 5px #555;
+  border-radius: 100%;
+  margin: 0px 2px;
+  cursor: pointer;
+}
+
+.indicator-inactive {
+  background-color: grey;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .arrow {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .indicator {
+    height: 0.4rem;
+    width: 0.4rem;
+  }
+
+  .arrow-left {
+    left: 0.5rem;
+  }
+
+  .arrow-right {
+    right: 0.5rem;
+  }
+}
